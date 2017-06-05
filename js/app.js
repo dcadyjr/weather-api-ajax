@@ -33,9 +33,15 @@ $.ajax({
 		tempHigh = Math.ceil(cityWeather.main.temp_max);
 		city = cityWeather.name;
 		description = cityWeather.weather[0].description;
+
+		$("#temp").append(temp);
+		$("#tempLow").append(tempLow);
+		$("#tempHigh").append(tempHigh);
+		$("#city").append(city);
+		$("#description").append(description);
 	}
 
 
 })
 
-	$("#tempValue").html(temp);
+	

@@ -1,7 +1,50 @@
-div{
+#container{
+	display: grid;
+	grid-template-columns: 50px 50px auto 50px 50px;
+	grid-template-rows: 25% 100px auto;
 	background-color: blue;
 	border: 1px solid black;
-	width: 200;
-	height: 200;
-	display: inline-block;
+	width: 500px;
+	height: 500px;
+	
+}
+
+#temp{
+	background-color: red;
+	border: 1px solid black;
+	grid-column-start 2;
+	grid-column-end: five;
+	grid-row-start: row1-start;
+	grid-row-end: 3;
+	width: 50px;
+	height: 50px;
+
+}
+#tempLow{
+	background-color: orange;
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+
+}
+#tempHigh{
+	background-color: pink;
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+
+}
+#city{
+	background-color: green;
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+
+}
+#description{
+	background-color: yellow;
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+
 }
