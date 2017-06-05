@@ -28,12 +28,14 @@ $.ajax({
 	url: "http://api.openweathermap.org/data/2.5/weather?zip=" + codeNumber + ",us&appid=052f26926ae9784c2d677ca7bc5dec98&units=imperial",
 	success: function(response) {
 		cityWeather = response;
-		temp = cityWeather.main.temp;
-		tempLow = cityWeather.main.temp_min;
-		tempHigh = cityWeather.main.temp_max;
+		temp = Math.ceil(cityWeather.main.temp);
+		tempLow = Math.ceil(cityWeather.main.temp_min);
+		tempHigh = Math.ceil(cityWeather.main.temp_max);
 		city = cityWeather.name;
 		description = cityWeather.weather[0].description;
-		// // console.log(weather);	
 	}
 
+
 })
+
+	$("#tempValue").html(temp);
