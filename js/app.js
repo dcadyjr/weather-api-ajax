@@ -15,13 +15,25 @@
 
 var zipCode = prompt("what's your zip code?");
 	var codeNumber = Number(zipCode);
+	var cityWeather;
+	var temp;
+	var tempLow;
+	var tempHigh;
+	var city;
+	var description;
 	// console.log(prompt.value);
 
 $.ajax({
 	method: "GET",
-	url: "http://api.openweathermap.org/data/2.5/weather?zip=" + codeNumber + ",us&appid=052f26926ae9784c2d677ca7bc5dec98",
+	url: "http://api.openweathermap.org/data/2.5/weather?zip=" + codeNumber + ",us&appid=052f26926ae9784c2d677ca7bc5dec98&units=imperial",
 	success: function(response) {
-		var weather = response;
-		console.log(response);	}
+		cityWeather = response;
+		temp = cityWeather.main.temp;
+		tempLow = cityWeather.main.temp_min;
+		tempHigh = cityWeather.main.temp_max;
+		city = cityWeather.name;
+		description = cityWeather.weather[0].description;
+		// // console.log(weather);	
+	}
 
 })
