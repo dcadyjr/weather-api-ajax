@@ -34,7 +34,7 @@ $.ajax({
 		city = cityWeather.name;
 		description = cityWeather.weather[0].description;
 
-		$("#temp").append(temp);
+		$("span").prepend(temp);
 		$("#tempLow").append(tempLow);
 		$("#tempHigh").append(tempHigh);
 		$("#city").append(city);
